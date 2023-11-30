@@ -1,0 +1,106 @@
+/* modeled on mac os calculator. Differences in function are displaying the calculations above the result and button transparency effect on hover and with transform on active. Colors aren't exact. */
+
+* {
+  box-sizing: border-box;
+  color: white;
+  font-size: 25px;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: lightsteelblue;
+}
+
+.calculator {
+  border-radius: 15px;
+  border: 15px solid rgba(0, 0, 0, 0.45);
+}
+
+.display {
+  background-color: rgba(0, 0, 0, 0.75);
+  height: 65px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  font-size: 35px;
+  padding-right: 10px;
+}
+
+.display-currentNumber {
+  font-size: 35px;
+}
+
+.calc-display {
+  height: 25px;
+  width: 100%;
+  position: relative;
+  top: 15px;
+  font-size: 15px;
+  text-align: right;
+  color: orange;
+}
+
+.calc-buttons {
+  display: flex;
+  width: 220px;
+}
+
+.nums-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 75%;
+  margin: 0;
+}
+
+.ops-container {
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+  margin: 0;
+}
+
+button {
+  height: 55px;
+  width: 55px;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: transparent;
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+.operations {
+  background-color: orange;
+}
+
+.numbers {
+  background-color: grey;
+}
+
+.big-button {
+  width: 110px;
+}
+
+.ac,
+.percent,
+.delete {
+  background-color: rgba(0, 0, 0, 0.26);
+}
+
+@media only screen and (max-width: 400px) {
+  .calculator {
+    transform: scale(1.2)
+  }
+  
+}
